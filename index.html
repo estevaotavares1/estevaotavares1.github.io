@@ -72,11 +72,18 @@
                         </div>
                         <div class="mb-3">
                             <label for="graduacao" class="form-label">Qual graduação pretende fazer:</label>
-                            <input type="select" class="form-control" id="graduacao" name="graduacao">
+                            <select id="graduacao" name="graduacao">
+                                <option value="agronomia">Agronomia</option>
+                                <option value="quimica">Quimica</option>
+                                <option value="enfermagem">Enfermagem</option>
+                                <option value="zootecnia">Zootecnia</option>
+                              </select>
                         </div>
                         <div class="mb-3">
                             <label for="turnos" class="form-label">Turnos:</label>
-                            <input type="chekbox" class="form-control" id="turnos" name="turnos">
+                            <input type="checkbox" class="form-control" id="checkbox1" name="turnos" value="Matutino">
+                            <input type="checkbox" class="form-control" id="checkbox2" name="ternos" value="Vespertino">
+                            
                         </div>
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </form>
