@@ -7,46 +7,51 @@
     
     <script>
         function validar() {
-            // alert("enviou os dados");
+             //alert("enviou os dados");
             let nome = document.getElementById("nome").value;
             let sobrenome = document.getElementById("sobrenome").value;
+            //alert("enviou os dados");
             let ano = document.getElementById("ano").value;
+            //alert("enviou os dados");
             let graduacao = document.getElementById("graduacao").value;
+            //alert("enviou os dados");
             let turnos = document.getElementById("turnos").value; 
+            //alert("enviou os turnos");
 
             if (nome == "") {
                 // alert("erro");
                 document.getElementById("nome").focus();
-                alert("Erro campo nome")
+                alert("Erro campo nome");
                 return false;
             }
-
+            //alert("enviou os dados");
             if (sobrenome == "") {
                 document.getElementById("sobrenome").focus();
-                alert("Erro campo Sobrenome")
+                alert("Erro campo Sobrenome");
                 return false;
             }
             if (ano == "") {
                 document.getElementById("ano").focus();
-                alert("Erro campo ano")
+                alert("Erro campo ano");
                 return false;
             }
             if (ano >= 2009) {
                 document.getElementById("ano").focus();
-                alert("Menor de 15")
+                alert("Menor de 15");
                 return false;
             }    
             if (graduacao == "") {
                 document.getElementById("graduacao").focus();
-                alert("Erro campo graduacao")
+                alert("Erro campo graduacao");
                 return false;
             }
             if (turnos == "") {
                 document.getElementById("turnos").focus();
-                alert("Erro campo turnos")
+                alert("Erro campo turnos");
                 return false;
             } else {
                 alert("Sucesso");
+                return true;
                 }
                 
 
@@ -54,11 +59,7 @@
     </script>
 </head>
 <body>
-    <form onsubmit="return validar()">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    </head>
-    <body>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -82,31 +83,19 @@
                                 <option value="quimica">Quimica</option>
                                 <option value="enfermagem">Enfermagem</option>
                                 <option value="zootecnia">Zootecnia</option>
-                              </select>
+                            </select>
                         </div>
-                            <div class="form-check">
-                                <label for="turnos">Turnos:</label><br>
-                                <input class="form-check-input" type="radio" value="matutino" id="matutino">
-                                <label class="form-check-label" for="turnos">
-                                  Matutino
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" value="vespertino" id="vespertino">
-                                <label class="form-check-label" for="turnos">
-                                  Vespertino
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" value="noturno" id="noturno">
-                                <label class="form-check-label" for="turnos">
-                                  Noturno
-                                </label>
-                            </div>
-                            
-                            
-                            
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="matutino" id="turnos" name="turno">Matutino
+                           
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="vespertino" id="turnos" name="turno">Vespertino
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="noturno" id="turnos" name="turno">Noturno
+                        </div>
+                        
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </form>
                 </div>
