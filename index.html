@@ -10,9 +10,9 @@
             // alert("enviou os dados");
             let nome = document.getElementById("nome").value;
             let sobrenome = document.getElementById("sobrenome").value;
-            let cpf = document.getElementById("cpf").value;
-            let email = document.getElementById("email").value;
-            let senha = document.getElementById("senha").value; 
+            let ano = document.getElementById("ano").value;
+            let graduacao = document.getElementById("graduacao").value;
+            let turnos = document.getElementById("turnos").value; 
 
             if (nome == "") {
                 // alert("erro");
@@ -26,19 +26,24 @@
                 alert("Erro campo Sobrenome")
                 return false;
             }
-            if (cpf == "") {
-                document.getElementById("cpf").focus();
-                alert("Erro campo cpf")
+            if (ano == "") {
+                document.getElementById("ano").focus();
+                alert("Erro campo ano")
                 return false;
             }
-            if (email == "") {
-                document.getElementById("email").focus();
-                alert("Erro campo email")
+            if (ano >= 2009) {
+                document.getElementById("ano").focus();
+                alert("Menor de 15")
+                return false;
+            }    
+            if (graduacao == "") {
+                document.getElementById("graduacao").focus();
+                alert("Erro campo graduacao")
                 return false;
             }
-            if (senha == "") {
-                document.getElementById("senha").focus();
-                alert("Erro campo senha")
+            if (turnos == "") {
+                document.getElementById("turnos").focus();
+                alert("Erro campo turnos")
                 return false;
             } else {
                 alert("Sucesso");
